@@ -29,7 +29,7 @@ from numpy import linalg as la
 class Convolution:
   def __init__(self):
   
-    # Write your naive 2D Convolution kernel here
+    # Naive 2D Convolution kernel
     self.kernel_code_naive = """
         __global__ void convolution_2D_naive(float * in, float * mask, float * out, 
          const int mask_width, int w, int h) {
@@ -59,7 +59,7 @@ class Convolution:
             }
         }
             """
-    # Write your tiled 2D Convolution kernel here
+    # Tiled 2D Convolution kernel 
     self.kernel_code_tiled = """
         __global__ void convolution_2D_tiled(float * in, float * mask, float * out, const int mask_width, int w, int h) {
             
